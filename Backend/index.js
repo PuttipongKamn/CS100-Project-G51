@@ -1,3 +1,7 @@
+const config = {
+  backendUrl: "http://localhost:8000/", // Default backend URL
+};
+const port = 8000;
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
