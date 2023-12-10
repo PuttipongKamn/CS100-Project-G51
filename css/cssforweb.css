@@ -16,7 +16,7 @@
 html {
     margin:auto;
     font-family: "Lucida Sans", sans-serif;
-    background-image: url('../image/cotton.jpg');
+    background-color: lightpink;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -81,7 +81,7 @@ html {
 
 .our{
     text-align: center;
-    background-color:lightpink;
+    background-color:blanchedalmond;
     background-size: contain;
     padding: 3px;
     margin: 0px;
