@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <title>Forms - CSTU Passport</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Form Container -->
+  <div class="form-container">
+    <h1>CSTU Passport</h1>
+    <!-- Main Form -->
+    <form id="myForm" action="#" method="post">
+      <!-- Firstname and Lastname Field -->
+      <div class="e">
+      <label for="fullname">ชื่อจริง - นามสกุล </label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="fullname" name="fullname" />
+        <small>ไม่ต้องกรอกชื่อกลาง </small>
+        <span id="fullnameError" class="error"></span>
+      </div>
+      
+      <!-- Student ID Field -->
+      <div class="e">
+      <label for="studentID">รหัสนักศึกษา</label>
+      </div>
+      <div class="form-group">  
+        <input type="text" id="studentID" name="studentID" />
+        <small>Please enter your 10-digit student ID.</small>
+        <span id="studentIDError" class="error"></span>
+      </div>
+      
+      <!--Thai ID Field -->
+      <div class="e">
+      <label for="thai">เลขประจำตัวประชาชน</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="thai" name="thai" />
+        <small>กรอกเลขบัตรประจำตัวประชาชน ให้ครบถ้วน 13 หลัก และขึ้นต้นด้วยเลข 1</small>
+        <span id="thaierror" class="error"></span>
+      </div>
+      
+      <!-- University Email Field -->
+      <div class="e">
+      <label for="email">อีเมลมหาลัย</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" />
+        <small>ได้โปรดกรอกตาม format นี้ => "xxx.yyy@dome.tu.ac.th".</small>
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <!-- Work/Activity Title Field -->
+      <div class="e">
+      <label for="workTitle">กิจกกรมที่ทำ</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="workTitle" name="workTitle" />
+      </div>
+
+      <!-- Type of Work/Activity Field -->
+      <div class="e">
+      <label for="activityType">ประเภทของกิจกรรม</label>
+      </div>
+      <div class="form-group"> 
+        <select id="activityType" name="activityType">
+          <option value="" disabled selected>Select an option</option>
+          <option value="วันปฐมนิเทศ">วันปฐมนิเทศ</option>
+          <option value="การอบรมปรับพื้นฐาน">การอบรมปรับพื้นฐาน</option>
+          <option value="วันเปิดเทอม">วันเปิดเทอม</option>
+          <option value="single used plastic">single used plastic</option>
+          <option value="กิจกรรม Halloween">กิจกรรม Halloween</option>
+          <option value="กิจกรรม Loy Kratong">กิจกรรม Loy Kratong</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+        <br>
+        <br>
+
+      <!-- Academic Year Field -->
+      <div class="e">
+      <label for="academicYear">ปีการศึกษา</label>
+      </div>
+      <div class="form-group">
+        <select id="academicYear" name="academicYear">
+          <option value="" disabled selected>Select an option</option>
+          <option value="2566">2566</option>
+         
+        </select>
+      </div>
+
+      <!-- Semester Field -->
+      <div class="e">
+      <label for="semester">ภาคเรียนที่</label>
+      </div>
+      <div class="form-group">
+        <select id="semester" name="semester">
+          <option value="" disabled selected>Select an option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="Summer">Summer</option>
+        </select>
+      </div>
+
+      <!-- Start Date/Time Field -->
+    <div class="e">
+      <label for="startDate">วันที่เริ่มกิจกรรม</label>
+    </div>
+      <div class="form-group">
+        <input type="datetime-local" id="startDate" name="startDate" />
+      </div>
+
+      <!-- End Date/Time Field -->
+      <div class="e">
+        <label for="endDate">วันที่เลิกกิจกรรม</label>
+      </div>
+      <div class="form-group">
+        <input type="datetime-local" id="endDate" name="endDate" />
+      </div>
+
+      <!-- Location Field -->
+      <div class="e">
+        <label for="location">สถานที่</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="location" name="location" />
+      </div>
+
+      <!-- Description Field -->
+      <div class="e">
+        <label for="description">ข้อเสนอแนะ</label>
+      </div>
+      <div class="form-group">
+        <textarea id="description" name="description" rows="4"></textarea>
+      </div>
+      
+      <div class="e">
+        <label for="checkbox"> ฉันยินยอม ที่จะให้ข้อมูลส่วนตัวของฉัน </label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox">
+        <span class="error" id="agreeCheckboxError"></span>
+      </div>
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit" id="submit" />
+      </div>
+    </form>
+  </div>
+  <div class="form-group">
+    <div class="output">
+    <p class="output1" id="output1"></p>
+    <p class="output2" id="output2"></p>
+    <p class="output3" id="output3"></p>
+    <p class="output4" id="output4"></p>
+    <p class="output5" id="output5"></p>
+    <p class="output6" id="output6"></p>
+    <p class="output7" id="output7"></p>
+    <p class="output8" id="output8"></p>
+    <p class="output9" id="output9"></p>
+    <p class="output10" id="output10"></p>
+    </div>
+    </div>
+</form>
+</div>
+  <!-- JavaScript -->
+  <script src="samplejs.js"></script>
+</body>
+</html>
